@@ -9,7 +9,11 @@ if __name__ == '__main__':
 
 # Команда для создания БД через Терминал (VS Code)
 '''
-docker run --name vote_db -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=password -e POSTGRES_DB=vote_db -d postgres:16.2
+docker run --name vote_db -p 5432:5432 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=password -e POSTGRES_DB=vote_db -d postgres:16.2
+
+docker pull postgres
+
+docker run -d --name postgresCont -p 5432:5432 -e POSTGRES_PASSWORD=pass123 postgres
 '''
 # После этого подключаюсь к БД через расширение VS Code
 # Введя аналогичные данные.

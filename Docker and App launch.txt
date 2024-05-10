@@ -1,0 +1,14 @@
+для поверки  кода до экзамена лучше воспользоваться докером, вот команды для запуска
+
+создание бд
+docker run --name vote_db -p 5432:5432 -e POSTGRES_USER=root -e
+ POSTGRES_PASSWORD=password -e POSTGRES_DB=vote_db -d postgres:16.2
+
+что бы запустить
+uvicorn <путь к папке с прилоением>:<переменная которая хранит FastAPI app> --reload
+в моём случае 
+uvicorn app:app --reload
+ВНИМАНИЕ название файла без / и типа .py
+
+\
+

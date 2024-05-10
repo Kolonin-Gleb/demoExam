@@ -1,3 +1,4 @@
+# Тут код для генерации токенов для Авторизации
 from fastapi import FastAPI, HTTPException, Request
 from models import User, Vote, engine
 from sqlmodel import Session, select
@@ -16,9 +17,11 @@ from pydantic import BaseModel
 
 # to get a string like this run:
 # openssl rand -hex 32
-SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
+SECRET_KEY = "6ad196420b42472d0e7d6ef4aca0600c71543272401309c46e8f46babc603bfd"
+# f713d3a591e4531b9a53b39cc79acf7a8bc7e92ace43407479ef89a852a7e7c2 ???
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
 
 class Token(BaseModel):
     access_token: str
